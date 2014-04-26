@@ -27,7 +27,7 @@ $ component install sindresorhus/is-tif
 ```js
 var readChunk = require('read-chunk'); // npm install read-chunk
 var isTif = require('is-tif');
-var buffer = readChunk('unicorn.tif', 0, 4);
+var buffer = readChunk.sync('unicorn.tif', 0, 4);
 
 isTif(buffer);
 //=> true
