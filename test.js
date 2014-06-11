@@ -8,6 +8,7 @@ function check(filename) {
 }
 
 it('should detect TIFF from Buffer', function () {
-	assert(check('fixture.tif'));
+	assert(check('fixture-little-endian.tif'));
+	assert(check('fixture-big-endian.tif'));
 	assert(!check('fixture.png'));
 });
