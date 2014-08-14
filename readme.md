@@ -11,14 +11,6 @@ Used by [image-type](https://github.com/sindresorhus/image-type).
 $ npm install --save is-tif
 ```
 
-```sh
-$ bower install --save is-tif
-```
-
-```sh
-$ component install sindresorhus/is-tif
-```
-
 
 ## Usage
 

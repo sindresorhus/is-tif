@@ -1,7 +1,7 @@
 'use strict';
 var assert = require('assert');
 var readChunk = require('read-chunk');
-var isTif = require('./index');
+var isTif = require('./');
 
 function check(filename) {
 	return isTif(readChunk.sync(filename, 0, 4));
