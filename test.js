@@ -1,14 +1,11 @@
-'use strict';
-var assert = require('assert');
-var readChunk = require('read-chunk');
-var isTif = require('./');
+import test from 'ava';
+import readChunk from 'read-chunk';
+import m from '.';
 
-function check(filename) {
-	return isTif(readChunk.sync(filename, 0, 4));
-}
+const check = filename => m(readChunk.sync(filename, 0, 4));
 
-it('should detect TIFF from Buffer', function () {
-	assert(check('fixture-little-endian.tif'));
-	assert(check('fixture-big-endian.tif'));
-	assert(!check('fixture.png'));
+test('detects TIFF from Buffer', t => {
+	t.true(check('fixture-little-endian.tif'));
+	t.true(check('fixture-big-endian.tif'));
+	t.false(check('fixture.png'));
 });

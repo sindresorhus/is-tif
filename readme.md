@@ -1,14 +1,12 @@
 # is-tif [![Build Status](https://travis-ci.org/sindresorhus/is-tif.svg?branch=master)](https://travis-ci.org/sindresorhus/is-tif)
 
-> Check if a Buffer/Uint8Array is a [TIFF](http://en.wikipedia.org/wiki/Tagged_Image_File_Format) image
-
-Used by [image-type](https://github.com/sindresorhus/image-type).
+> Check if a Buffer/Uint8Array is a [TIFF](https://en.wikipedia.org/wiki/TIFF) image
 
 
 ## Install
 
-```sh
-$ npm install --save is-tif
+```
+$ npm install is-tif
 ```
 
 
@@ -17,9 +15,9 @@ $ npm install --save is-tif
 ##### Node.js
 
 ```js
-var readChunk = require('read-chunk'); // npm install read-chunk
-var isTif = require('is-tif');
-var buffer = readChunk.sync('unicorn.tif', 0, 4);
+const readChunk = require('read-chunk');
+const isTif = require('is-tif');
+const buffer = readChunk.sync('unicorn.tif', 0, 4);
 
 isTif(buffer);
 //=> true
@@ -28,11 +26,11 @@ isTif(buffer);
 ##### Browser
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'unicorn.tif');
 xhr.responseType = 'arraybuffer';
 
-xhr.onload = function () {
+xhr.onload = () => {
 	isTif(new Uint8Array(this.response));
 	//=> true
 };
@@ -50,6 +48,11 @@ Accepts a Buffer (Node.js) or Uint8Array.
 It only needs the first 4 bytes.
 
 
+## Related
+
+- [file-type](https://github.com/sindresorhus/file-type) - Detect the file type of a Buffer/Uint8Array
+
+
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

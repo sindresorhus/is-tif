@@ -1,15 +1,15 @@
 'use strict';
-module.exports = function (buf) {
-	if (!buf || buf.length < 4) {
+module.exports = buffer => {
+	if (!buffer || buffer.length < 4) {
 		return false;
 	}
 
-	return (buf[0] === 73 &&
-		buf[1] === 73 &&
-		buf[2] === 42 &&
-		buf[3] === 0) ||
-		(buf[0] === 77 &&
-		buf[1] === 77 &&
-		buf[2] === 0 &&
-		buf[3] === 42);
+	return (buffer[0] === 73 &&
+		buffer[1] === 73 &&
+		buffer[2] === 42 &&
+		buffer[3] === 0) ||
+		(buffer[0] === 77 &&
+		buffer[1] === 77 &&
+		buffer[2] === 0 &&
+		buffer[3] === 42);
 };
