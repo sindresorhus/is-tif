@@ -1,4 +1,4 @@
-# is-tif [![Build Status](https://travis-ci.org/sindresorhus/is-tif.svg?branch=master)](https://travis-ci.org/sindresorhus/is-tif)
+# is-tif
 
 > Check if a Buffer/Uint8Array is a [TIFF](https://en.wikipedia.org/wiki/TIFF) image
 
