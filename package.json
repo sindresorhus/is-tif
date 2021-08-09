@@ -1,6 +1,6 @@
 {
 	"name": "is-tif",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "Check if a Buffer/Uint8Array is a TIFF image",
 	"license": "MIT",
 	"repository": "sindresorhus/is-tif",
